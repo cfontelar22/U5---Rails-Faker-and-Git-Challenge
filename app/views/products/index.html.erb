@@ -1,15 +1,8 @@
 <h1>All Products</h1>
-
-<div class="container">
-  <div class="products">
-    <% @products.each do |product| %>
-      <div class="product">
-        <h2><%= link_to product.title, product %></h2>
-        <p><strong>Description:</strong> <%= product.description %></p>
-        <p><strong>Price:</strong> <%= number_to_currency(product.price) %></p>
-        <p><strong>Stock Quantity:</strong> <%= product.stock_quantity %></p>
-        <p><strong>Category:</strong> <%= product.category.name %></p>
-      </div>
-    <% end %>
-  </div>
-</div>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to "#{product.title} - #{product.category.name}", product_path(product) %>
+    </li>
+  <% end %>
+</ul>

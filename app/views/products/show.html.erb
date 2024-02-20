@@ -1,9 +1,5 @@
-<div class="product-details">
-  <h1><%= @product.title %></h1>
-  <p><strong>Description:</strong> <%= @product.description %></p>
-  <p><strong>Price:</strong> <%= number_to_currency(@product.price) %></p>
-  <p><strong>Stock Quantity:</strong> <%= @product.stock_quantity %></p>
-  <p><strong>Category:</strong> <%= @product.category.name %></p>
-
-  <%= link_to "Back to All Products", products_path %>
-</div>
+<h1><%= @product.title %></h1>
+<p>Description: <%= @product.description %></p>
+<p>Price: <%= @product.price %></p>
+<p>Stock Quantity: <%= @product.stock_quantity %></p>
+<p>Category: <%= @product.category.name %></p>

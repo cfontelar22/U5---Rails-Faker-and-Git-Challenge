@@ -1,25 +1,27 @@
+# db/seeds.rb
 
+require 'csv'
 
-require "csv"
-
-# Clear existing data
+# Clear out existing data
 Product.destroy_all
 Category.destroy_all
 
-# Read data from CSV
+# Read the CSV file
 csv_file = Rails.root.join('db', 'products.csv')
 csv_data = File.read(csv_file)
-products = CSV.parse(csv_data, headers: true)
 
-# Create products and categories
-products.each do |row|
-  category = Category.find_or_create_by(name: row['category'])
-  category.products.create(
-    title: row['title'],
+# Parse CSV and create products with associated categories
+CSV.parse(csv_data, headers: true) do |row|
+  puts "Row: #{row}" 
+  category_name = row['category']
+  category = Category.find_or_create_by(name: category_name)
+  
+  product = Product.new(
+    title: row['name'],
     description: row['description'],
     price: row['price'],
-    stock_quantity: row['stock_quantity']
+    stock_quantity: row['stock quantity']
   )
+  product.category = category
+  product.save!
 end
-
-puts "Seed data loaded successfully!"
