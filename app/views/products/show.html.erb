@@ -1,5 +1,11 @@
-<h1><%= @product.title %></h1>
-<p>Description: <%= @product.description %></p>
-<p>Price: <%= @product.price %></p>
-<p>Stock Quantity: <%= @product.stock_quantity %></p>
-<p>Category: <%= @product.category.name %></p>
+<!-- app/views/products/show.html.erb -->
+
+<div class="product-details">
+  <h2 class="product-title"><%= @product.title %></h2>
+  <p class="product-category"><%= @product.category.name %></p> <!-- Display category -->
+  <p class="product-description"><%= @product.description %></p>
+  <p class="product-price">Price: <%= @product.price %></p>
+  <p class="product-stock">Stock Quantity: <%= @product.stock_quantity %></p>
+</div>
+
+<%= link_to "Back to All Products", products_path, class: "back-link" %>

@@ -1,38 +1,85 @@
 
-.title {
-    font-size: 2em;
-    font-family: Arial, sans-serif;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+.page-heading {
+  text-align: center; 
+}
 
-  }
-  
-  .product {
-    background-color: #838888;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .product h2 {
-    margin-top: 0;
-  }
-  
-  .product p {
-    margin-bottom: 10px;
-  }
-  
-  .product-details h1 {
-    margin-top: 0;
-  }
-  
-  .product-details p {
-    margin-bottom: 10px;
-  }
-  
+/* Style for the product title link */
+.product-title {
+  color: #333; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+  text-align: center; 
+  display: block;
+}
+
+/* Hover effect for the product title link */
+.product-title:hover {
+  color: #007bff; 
+}
+
+/* Style for the product list */
+.product-list {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+/* Style for each product item */
+.product-item {
+  margin-bottom: 20px; 
+  padding: 20px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+  text-align: center;
+}
+
+/* Hover effect for each product item */
+.product-item:hover {
+  background-color: #f9f9f9; 
+}
+
+/* Style for the category */
+.product-category {
+  color: #666; 
+}
+
+/* Style for the product details */
+.product-details {
+  margin: 0 auto; 
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the product title */
+.product-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style for the product category */
+.product-category {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Style for the product description */
+.product-description {
+  margin-bottom: 10px;
+}
+
+/* Style for the product price and stock */
+.product-price,
+.product-stock {
+  margin-bottom: 10px;
+}
+
+/* Style for the back link */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #333;
+}
