@@ -1,6 +1,6 @@
-<div class="container">
-  <h1 class="title">All Products</h1>
+<h1>All Products</h1>
 
+<div class="container">
   <div class="products">
     <% @products.each do |product| %>
       <div class="product">
@@ -8,6 +8,7 @@
         <p><strong>Description:</strong> <%= product.description %></p>
         <p><strong>Price:</strong> <%= number_to_currency(product.price) %></p>
         <p><strong>Stock Quantity:</strong> <%= product.stock_quantity %></p>
+        <p><strong>Category:</strong> <%= product.category.name %></p>
       </div>
     <% end %>
   </div>
