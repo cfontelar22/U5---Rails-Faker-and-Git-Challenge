@@ -1,4 +1,3 @@
-# db/seeds.rb
 676.times do
     Product.create(
       title: Faker::Commerce.product_name,

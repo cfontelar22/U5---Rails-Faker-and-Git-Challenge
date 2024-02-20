@@ -1,15 +1,23 @@
 
+.title {
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+
   }
   
   .product {
-    background-color: #f9f9f9;
+    background-color: #838888;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .product h2 {
@@ -18,15 +26,6 @@
   
   .product p {
     margin-bottom: 10px;
-  }
-  
-.product-details {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
   .product-details h1 {
